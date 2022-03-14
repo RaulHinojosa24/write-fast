@@ -5,7 +5,7 @@ let Watch = {
      * Empieza a contar en milisegundos
      */
     startWatch() {
-        this.startTime = new Date().getTime()
+        this.startTime = new Date().getTime();
     },
 
     /**
@@ -13,17 +13,12 @@ let Watch = {
      * @returns number Milisegundos entre que hicimos 
      */
     stopWatch() {
-
         if (this.startTime == 0) {
-            throw "No has iniciado el cronómetro con startWatch."
+            throw "No has iniciado el cronómetro con startWatch.";
         }
-
 
         let ms = new Date().getTime() - this.startTime;
         this.startTime = 0;
         return ms;
-
     }
-
 }
-

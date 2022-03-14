@@ -15,6 +15,10 @@
         #next-word {
             text-transform: uppercase;
         }
+
+        #correct {
+            color: green;
+        }
     </style>
 
 </head>
@@ -23,7 +27,10 @@
     <main class="w3-container">
         <h1 class="w3-panel w3-pale-green">Palabras por segundo</h1>
         <section id="next-word-card" class="w3-container w3-hide">
-            <div class="w3-panel w3-padding-16 w3-large" id="next-word"></div>
+            <div class="w3-panel w3-padding-16 w3-large" id="next-word">
+                <span id="correct"></span><span id="remain">
+                </span>
+            </div>
         </section>
         <section id="start-game">
             <button class="w3-btn w3-black">Empezar</button>
