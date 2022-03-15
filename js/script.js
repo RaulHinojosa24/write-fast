@@ -40,7 +40,6 @@ function beginWord() {
     function keyPressed(event) {
         const acceptedCharacters = "abcdefghijklmnñopqrstuvwxyz";
         const character = event.key.toLowerCase();
-        console.log(character);
 
         if (acceptedCharacters.includes(character)) {
             if (STATE.isCorrectLetter(character)) {
@@ -59,7 +58,7 @@ function beginWord() {
 
 function wordFinished() {
     completedWords.push({ word: STATE.currentWord, time: Watch.stopWatch() });
-    console.log(completedWords[completedWords.length - 1]);
+    console.log(`Has tardado ${completedWords[completedWords.length - 1].time / 1000}s en escribir la palabra: ${STATE.currentWord}`);
 
     beginWord();
 }
